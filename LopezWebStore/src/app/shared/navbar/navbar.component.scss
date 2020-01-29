@@ -1,0 +1,34 @@
+.navbarA {
+  background: rgba(194, 202, 81, 0.8);
+}
+
+button {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(94, 0, 0);
+  border-color: #5e0000;
+  background-color: rgba(236, 224, 228);
+  height: 50px;
+  margin: 5px;
+}
+button:hover {
+  background-color: rgba(236, 244, 228);
+}
+
+button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+img {
+  height: 65px;
+  width: 100px;
+}
+.cart {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+}

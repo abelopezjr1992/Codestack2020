@@ -71,7 +71,7 @@ export class DataService {
     //find the index location of product
     const index = this.findItemInCart(id);
     //perform a splice
-    this.itemsInCart[index].qty=0;
+    this.itemsInCart
     this.itemsInCart.splice(index, 1);
   }
   findItemInCart(id: Iproduct): number {

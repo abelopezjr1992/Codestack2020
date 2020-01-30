@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from '../shared/shared.module';
 import { AtestComponent } from './atest/atest.component';
+import { ModalComponent } from '../shared/modal/modal.component';
 
 
 
@@ -17,6 +18,7 @@ import { AtestComponent } from './atest/atest.component';
     CommonModule,
     SharedModule
   ],
-  exports: [AboutUsComponent, CartComponent, LoginComponent, ProductsComponent, ProfileComponent, HomeComponent, AtestComponent]
+  exports: [AboutUsComponent, CartComponent, LoginComponent, ProductsComponent, ProfileComponent, HomeComponent, AtestComponent],
+  entryComponents: [AtestComponent]
 })
 export class ViewsModule { }

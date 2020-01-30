@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IProduct } from 'src/app/interface/iproduct';
+import { DataService } from 'src/app/services/data.service';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-products',
@@ -6,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-
-  constructor() { }
+  items: IProduct[] = []
+  constructor(private dService: DataService, private cartService: CartService) { }
 
   ngOnInit() {
+    this.items = this.dService.getProducts();
   }
+
 
 }

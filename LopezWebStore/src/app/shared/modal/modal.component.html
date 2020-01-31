@@ -6,7 +6,12 @@
         </button>
     </div>
     <div class="modal-body">
-        <p>{{item?.pName}}&hellip;</p>
+        <img src="{{item?.img}}">
+        <h4>{{item?.pName}}&hellip;</h4>
+        <br>
+        <p>
+            {{item?.price| currency}}
+        </p>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>

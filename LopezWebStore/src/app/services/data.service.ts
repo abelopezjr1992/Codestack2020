@@ -13,7 +13,7 @@ export class DataService {
       pDesc: "Brought to you by one ....",
       price: "249.99",
       quantity: 0,
-      img: ""
+      img: "/assets/Ps4Product.jpg"
     },
     {
       id: "Xbox One",
@@ -22,7 +22,7 @@ export class DataService {
       pDesc: "Brought to you by one ....",
       price: "249.99",
       quantity: 0,
-      img: ""
+      img: "/assets/XboxOneProduct.jpg"
     },
     {
       id: "PC",
@@ -31,7 +31,7 @@ export class DataService {
       pDesc: "Brought to you by one ....",
       price: "600.99",
       quantity: 0,
-      img: ""
+      img: "/assets/GamingPCProduct.jpg"
     },
     {
       id: "Ps4",

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ModalComponent } from './modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -10,7 +11,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   declarations: [NavbarComponent, ModalComponent],
   imports: [
     CommonModule,
-    NgbModule
+    NgbModule,
+    AppRoutingModule
 
   ],
   exports: [

@@ -4,21 +4,46 @@
             <img src="/assets/Logo.png">
         </li>
         <li class="nav-item">
-            <button class="nav-link active">Home</button>
+            <button class="nav-link active" routerLink="/home" routerLinkActive="active">Home</button>
         </li>
         <li class="nav-item">
-            <button class="nav-link">About Us</button>
+            <button class="nav-link" routerLink="/about-us" routerLinkActive="active">About Us</button>
         </li>
         <li class="nav-item">
-            <button class="nav-link">Products</button>
+            <button class="nav-link" routerLink="/products" routerLinkActive="active">Products</button>
         </li>
     </div>
     <div class="col-6 d-flex  align-items-center justify-content-end">
         <li>
-            <button class="nav-link">Login</button>
+            <button class="nav-link" routerLink="/login" routerLinkActive="active">Login</button>
         </li>
-        <li>
-            <img class="cart" src="/assets/Cart.png">
-        </li>
+        <div class="form-inline my-2 my-lg-0">
+            <a id="cart" (click)="toggleList()"><i class="fa fa-shopping-cart"></i> Cart <span
+                    class="badge badge-info">{{cartCount}}</span></a>
+        </div>
     </div>
 </ul>
+<div class="container" *ngIf="showList">
+    <div class="shopping-cart">
+        <div class="shopping-cart-header">
+            <i class="fa fa-shopping-cart cart-icon"></i><span class="badge badge-info">{{cartCount}}</span>
+            <div class="shopping-cart-total">
+                <span>Total:</span>
+                <span>${{cartTotal}}</span>
+            </div>
+        </div>
+        <div *ngIf="cartItems.length == 0" class="py-2">
+            No items in your cart!
+        </div>
+        <ul class="shopping-cart-items">
+            <li *ngFor="let item of cartItems; let i=index">
+                <!-- <img src="assets/test.jpg" alt="Item" /> -->
+                <span class="item-name">{{item.pName}}</span>
+                <span class="item-price">${{item.price}}</span>
+                <span class="item-quantity">Quantity: {{item.quantity}}</span>
+                <a class="item-remove text-danger" (click)="removeFromCart(item, index)"> Remove </a>
+            </li>
+        </ul>
+        <a href="#" class="btn btn-primary btn-block">Checkout</a>
+    </div>
+</div>

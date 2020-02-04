@@ -9,12 +9,17 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  items: IProduct[] = []
+  items: IProduct[] = [];
+  productList: IProduct[];
   constructor(private dService: DataService, private cartService: CartService) { }
 
   ngOnInit() {
     this.items = this.dService.getProducts();
+    this.productList = this.dService.getProducts();
   }
 
+  addToCart(item){
+    this.cartService.addItemsToCart(item);
+  }
 
 }

@@ -9,14 +9,14 @@ import { HomeComponent } from './views/home/home.component';
 import { AtestComponent } from './views/atest/atest.component';
 
 
-const routes: Routes = [ 
-  { path: 'about-us', component: AboutUsComponent},
-  { path: 'cart', component:  CartComponent},
-  { path: 'login', component: LoginComponent},
-  { path: 'products', component:  ProductsComponent},
-  { path: 'profile', component:  ProfileComponent},
-  { path: 'home', component: HomeComponent},
-  {path: 'atest', component : AtestComponent},
+const routes: Routes = [
+  { path: 'about-us', component: AboutUsComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'atest', component: AtestComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

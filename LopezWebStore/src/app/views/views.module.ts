@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from '../shared/shared.module';
 import { AtestComponent } from './atest/atest.component';
 import { ModalComponent } from '../shared/modal/modal.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -16,7 +17,8 @@ import { ModalComponent } from '../shared/modal/modal.component';
   declarations: [AboutUsComponent, CartComponent, LoginComponent, ProductsComponent, ProfileComponent, HomeComponent, AtestComponent],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule
   ],
   exports: [AboutUsComponent, CartComponent, LoginComponent, ProductsComponent, ProfileComponent, HomeComponent, AtestComponent],
   entryComponents: [AtestComponent]

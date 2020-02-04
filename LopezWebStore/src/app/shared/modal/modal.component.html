@@ -1,23 +1,28 @@
-<ng-template #content let-modal>
-    <div class="modal-header">
-        <h4 class="modal-title">{{item?.id}}</h4>
-        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <div class="modal-body">
-        <img src="{{item?.img}}">
-        <h4>{{item?.pName}}&hellip;</h4>
-        <br>
-        <p>
-            {{item?.price| currency}}
-        </p>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-    </div>
-</ng-template>
 
-<button class="btn btn-outline-primary mb-2 mr-2" (click)="openWindowCustomClass(content)">
-    Product Description
-</button>
+<div class="bGround">
+
+    <ng-template #content let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title">{{item?.pName}}</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <img src="{{item?.img}}">
+            <h4>{{item?.pName}}&hellip;</h4>
+            <br>
+            <p>
+                {{item?.price| currency}}
+            </p>
+            <button class="btn btn-primary" (click)="addToCart(item)">+</button>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+        </div>
+    </ng-template>
+    
+    <button class="btn btn-outline-primary mb-2 mr-2" (click)="openWindowCustomClass(content)">
+        Product Description
+    </button>
+</div>

@@ -1,3 +1,52 @@
 <div class="container-fluid">
     <app-navbar></app-navbar>
+
+    <div class="container mt-5">
+        <div class="row background">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6">
+                        <input #createUN type="text" class="form-control" placeholder="Create Username"
+                            aria-label="Create Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <input #FirstName type="text" class="form-control" placeholder="First Name"
+                            aria-label="First Name" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="col-6">
+                        <input #LastName type="text" class="form-control" placeholder="Last Name" aria-label="Last Name"
+                            aria-describedby="basic-addon1">
+                    </div>
+
+                </div>
+
+                <input #email type="text" class="form-control" placeholder="Email Address" aria-label="Email Address"
+                    aria-describedby="basic-addon1">
+
+                <input #confirmEmail type="text" class="form-control" placeholder="Confirm Email"
+                    aria-label="Confirm Email" aria-describedby="basic-addon1">
+
+                <input #createPW type="password" class="form-control" placeholder="Create Password"
+                    aria-label="Create Password" aria-describedby="basic-addon1">
+
+                <input #confirmPW type="password" class="form-control" placeholder="Confirm Password"
+                    aria-label="Confirm Password" aria-describedby="basic-addon1">
+
+                <button type="button" (click)='createAccount(FirstName.value, LastName.value, email.value, confirmEmail.value, createPW.value,
+                confirmPW.value, createUN.value)' class="btn btn-dark">
+                    Create Account</button>
+
+            </div>
+
+            <div class="col-6 vl">
+                <input #un type="text" class="form-control" placeholder="Username" aria-label="Username"
+                    aria-describedby="basic-addon1">
+
+                <input #pw type="password" class="form-control" placeholder="Password" aria-label="Password"
+                    aria-describedby="basic-addon1">
+                <button type="button" (click)='logIn(un.value,pw.value)' class="btn btn-dark">Log Me In!!</button>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,10 +1,20 @@
 import { Injectable } from '@angular/core';
 import { IProduct } from '../interface/iproduct';
+import { User } from '../interface/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
+  userList: User[] = [
+    {
+      FirstName: 'Abraham',
+      LastName: 'Lopez',
+      email: 'abelopezjr1992@gmail.com',
+      createPW: '1234567',
+      createUN: 'abelopezjr1992'
+    }
+  ];
   products: IProduct[] = [
     {
       id: "Ps4",
@@ -53,8 +63,35 @@ export class DataService {
     },
   ]
   constructor() { }
-  
+
   getProducts(): IProduct[] {
     return this.products;
+  }
+  checkCred(userName: string, passWord: string): boolean {
+    let result = false;
+    if (userName === this.userList[0].createUN) {
+      if (passWord === this.userList[0].createPW) {
+        result = true;
+      }
+    }
+    return result;
+  }
+
+  checkUserName(userName: string): boolean {
+    //Searching if userName exists
+    let result = false;
+    if (this.userList.find(x => userName.toLowerCase() === x.createUN)) {
+      result = true;
+    };
+    return result;
+  }
+
+  addUser(userAccount: User) {
+    //const userAccount: User = {
+    //  userName: uN.toLowerCase(),
+    //  passWord: pW
+    // };
+    this.userList.push(userAccount);
+    console.log(this.userList);
   }
 }

@@ -1,12 +1,15 @@
 <div class="imgBg">
     <div class="container-fluid">
-        <div class="row ml-3">
-            <span class="ml-auto">
+        <div class="row ml-5">
+            <span class="ml-auto ml-5">
                 <ul class="d-flex justify-content-end ml-5 nav">
                     <li class="nav-item ml-5 d-flex align-items-center">
-                        <button class="ml-5 nav-link active" routerLink="/products" routerLinkActive="active">
-                            Products
-                        </button>
+                        <div class="container-fluid ml-5">
+
+                            <button class="ml-2 nav-link active" routerLink="/products" routerLinkActive="active">
+                                Products
+                            </button>
+                        </div>
                     </li>
                     <img class="img-fluid imgLogo" src=".\assets\Logo.png">
                     <li class="nav-item d-flex align-items-center">
@@ -17,8 +20,10 @@
             <ul class="nav d-flex ml-auto">
                 <li class="d-flex align-items-center nav-item">
                     <button class="nav-link mr-3" routerLink="/login" routerLinkActive="active">Login</button>
-                    <img class="img-fluid imgProfile mr-3" routerLink="/cart" routerLinkActive="active"
-                        src="/assets/Cart.png">
+                    <div class="form-inline my-2 my-lg-0 ml-2 mr-5">
+                        <a id="cart" (click)="toggleList()"><i class="fa fa-shopping-cart"></i> Cart <span
+                                class="badge badge-info">{{cartCount}}</span></a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -27,20 +32,20 @@
     <div class="container-fluid navAttribute mt-4">
         <ul class="d-flex justify-content-center mr-5 nav">
             <li class="mx-1">
-                <button>
+                <button routerLink="/products" routerLinkActive="active">
                     <img class="smallImg" src="./assets/pc.png">
                     PC Products
                 </button>
             </li>
 
             <li class="mx-1">
-                <button>
+                <button routerLink="/products" routerLinkActive="active">
                     <img class="smallImg" src="./assets/ps4-png-ps4-png-300.png">
                     PS4 Products
                 </button>
             </li>
-            <li class="mx-1 mr-3">
-                <button>
+            <li class="mx-1 mr-3" >
+                <button routerLink="/products" routerLinkActive="active">
                     <img class="smallImg" src="./assets/xbox-512.png">
                     Xbox Products
                 </button>
@@ -54,6 +59,6 @@
             <br>
             Use the best Products!
         </h1>
-        <button class="mt-4">Buy Now</button>
+        <button class="mt-4" routerLink="/products" routerLinkActive="active">Buy Now</button>
     </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +8,13 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  cartCount = 0;
+  constructor(private cartService: CartService) { }
 
   ngOnInit() {
+    this.cartService.$cartQuantity.subscribe(count => {
+      this.cartCount = count;
+    });
   }
   
 }

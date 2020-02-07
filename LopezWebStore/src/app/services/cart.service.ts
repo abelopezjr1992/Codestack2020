@@ -27,7 +27,7 @@ export class CartService {
     }
     this.cartQuantity++;
     console.log(this.cartItems);
-    this.cartTotal += +item.price;
+    this.cartTotal = parseFloat(this.cartTotal + '') + parseFloat(item.price);
 
     this.$cartItems.next(this.cartItems);
     this.$cartTotal.next(this.cartTotal);
@@ -36,8 +36,8 @@ export class CartService {
 
   removeProduct(item, index) {
     this.cartItems.splice(index, 1);
-    const totalPrice = item.quantity * +item.price;
-    this.cartTotal -= totalPrice;
+    const totalPrice = item.quantity * parseFloat(item.price);
+    this.cartTotal = parseFloat(this.cartTotal + '') - totalPrice;
     this.cartQuantity -= item.quantity;
 
     this.$cartItems.next(this.cartItems);

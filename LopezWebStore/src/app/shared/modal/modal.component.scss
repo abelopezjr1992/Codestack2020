@@ -8,13 +8,17 @@
 .light-blue-backdrop {
   background-color: #5cb3fd;
 }
-img {
-  height: 100px;
-  width: 100px;
+.btn-primary{
+  background-color:  rgba(194, 202, 81);
+  border-color:  rgba(94, 0, 0);
+  color:  rgba(94, 0, 0);
+  font-size:16px;
 }
-.bGround {
-  background: rgba(194, 202, 81);
-  border-style: solid;
-  border-radius: 10px;
-  border-color: rgba(94, 0, 0);
+h3{
+  color:  rgba(94, 0, 0);
+  background-color:  rgba(194, 202, 81);
+}
+img{
+  width:100%;
+  height:100%;
 }

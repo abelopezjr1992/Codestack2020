@@ -1,6 +1,4 @@
-
-<div class="bGround">
-
+<div>
     <ng-template #content let-modal>
         <div class="modal-header">
             <h4 class="modal-title">{{item?.pName}}</h4>
@@ -9,20 +7,34 @@
             </button>
         </div>
         <div class="modal-body">
-            <img src="{{item?.img}}">
-            <h4>{{item?.pName}}&hellip;</h4>
-            <br>
-            <p>
-                {{item?.price| currency}}
-            </p>
-            <button class="btn btn-primary" (click)="addToCart(item)">+</button>
+            <div class="row">
+                <div class="col-12">
+                    <img src="{{item?.img}}">
+                </div>
+                <div class="col-12">
+                    <h4>{{item?.pName}}</h4>
+                </div>
+                <br>
+                <div class="col-12">
+                    <p>
+                        {{item?.price| currency}}
+                    </p>
+                </div>
+                <div class="col-12">
+                    {{item?.pDesc}}
+                </div>
+
+            </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+            <button class="btn btn-primary" (click)="addToCart(item)"> Add to Cart</button>
+            <button type="button" class="btn btn-primary" (click)="modal.close('Close click')">Close</button>
         </div>
     </ng-template>
-    
-    <button class="btn btn-outline-primary mb-2 mr-2" (click)="openWindowCustomClass(content)">
-        Product Description
+
+    <button class="btn btn-primary btn-sm" (click)="openWindowCustomClass(content)">
+        Product
+        <br>
+        Description
     </button>
 </div>

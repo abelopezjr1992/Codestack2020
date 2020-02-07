@@ -1,3 +1,46 @@
-.spacer{
-    margin-top:25px;
+.spacer {
+  margin-top: 25px;
+  //   margin: 5px;
+  background: rgba(194, 202, 81);
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgba(94, 0, 0);
+}
+
+.div-table {
+  display: table;
+  width: 100%;
+}
+.div-row {
+  display: table-row;
+}
+
+.div-col {
+  display: table-cell;
+  width: 32%;
+  margin: 10px;
+}
+img {
+  height: 200px;
+  width: 200px;
+}
+.btn-primary {
+  background-color: rgba(194, 202, 81);
+  border-color: rgba(94, 0, 0);
+  color: rgba(94, 0, 0);
+  font-size: 16px;
+}
+.headerB {
+  background-color: rgba(194, 202, 81);
+  
+}
+.card-body {
+  padding: 14px;
+}
+.card {
+  width: 90%;
+}
+hr{
+  border: 2px solid rgba(94, 0, 0);
+  margin:0px;
 }

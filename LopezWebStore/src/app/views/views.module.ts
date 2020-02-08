@@ -10,11 +10,12 @@ import { SharedModule } from '../shared/shared.module';
 import { AtestComponent } from './atest/atest.component';
 import { ModalComponent } from '../shared/modal/modal.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 
 @NgModule({
-  declarations: [AboutUsComponent, CartComponent, LoginComponent, ProductsComponent, ProfileComponent, HomeComponent, AtestComponent],
+  declarations: [AboutUsComponent, CartComponent, LoginComponent, ProductsComponent, ProfileComponent, HomeComponent, AtestComponent, CheckoutComponent],
   imports: [
     CommonModule,
     SharedModule,

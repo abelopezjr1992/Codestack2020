@@ -1,0 +1,54 @@
+<div class="container-fluid">
+
+    <app-navbar></app-navbar>
+
+    <div class="container mt-5">
+        <div class="row background p-3">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 my-3 mx-auto">
+                        <input #country type="text" class="form-control" placeholder="Country" aria-label="Country"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="col-12">
+                        <input #creditCard type="text" class="form-control" placeholder="Credit Card Number"
+                            aria-label="Credit Card Number" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="col-6 my-3">
+                        <input #firstName type="text" class="form-control" placeholder="First Name"
+                            aria-label="First Name" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="col-6 my-3 pl-1">
+                        <input #lastName type="text" class="form-control" placeholder="Last Name" aria-label="Last Name"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="col-12">
+                        <input #address type="text" class="form-control" placeholder="Address" aria-label="Address"
+                            aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="col-12 my-3">
+                        <input #city type="text" class="form-control" placeholder="City" aria-label="city"
+                            aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="col-6">
+                        <input #state type="text" class="form-control" placeholder="State" aria-label="Create Password"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="col-6 pl-1">
+                        <input #zipCode type="text" class="form-control" placeholder="Zip Code" aria-label="Zip Code"
+                            aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="col-8"></div>
+                    <div class="col-4  mt-3 d-flex justify-content-end">
+                        <button type="button"
+                            (click)='checkout(country.value, creditCard.value, firstName.value, lastName.value,address.value, city.value, state.value, zipCode.value)'
+                            class="btn btn-dark" routerLink="/home" routerLinkActive="active"> Checkout </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

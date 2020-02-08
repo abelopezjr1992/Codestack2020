@@ -25,5 +25,6 @@ export class CheckoutComponent implements OnInit {
       zipCode: zipCode
     }
     this.dService.saveInfo(addThisInfo)
+    alert("Your Items will Arrive in 7 Days. Thank you for becoming a Ruler!")
   }
 }

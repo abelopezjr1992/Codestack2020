@@ -1,0 +1,134 @@
+@import "~bootstrap/scss/bootstrap";
+
+body{
+    background-image: url('/assets/bgtexture.jpg');
+}
+.dRed{
+    color:#5F002B;
+}
+
+.nav-link {
+    color: #5F002B;
+}
+.white{
+    color:white;
+}
+.endRight{
+    display: flex;
+    justify-content: flex-end;
+}
+.ntoggler.navbar-toggler{
+    border-color: #5F002B;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bgWhite{
+    background-color:white;
+}
+.between{
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    background-color: #ffffff00;
+    border: none;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+}
+.underline{
+    border-bottom: 2px #980051 solid;
+}
+.cateringHead{
+font-size: 50px;
+display: flex;
+align-content: center;
+}
+.cateringHero{
+    background-image: url(/assets/cateringHero.jpg);
+    background-size: cover;
+    height: 500px;
+    margin-bottom: 90px;
+}
+  .montauk{
+    font-family:Montauk;
+    color: #5F002B;
+  }
+.cateringText{
+    kerning: 2px;
+    line-height: 15px;
+    margin-bottom: 28px;
+}
+
+.cateringRow2{
+    margin-bottom: 100px;
+}
+
+.cateringTextBox{
+    padding-top: 40px;
+}
+
+.cateringRow3{
+    padding-bottom: 61px;
+}
+
+.photoHead{
+    height: 80px;
+}
+
+.photoB{
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    padding: 0px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: white;
+}
+
+.imgSize2{
+    width: 150px;
+    height: 50px;
+}
+/* Abe's CSS */
+.heroImg{
+    background-size: cover;
+    
+}
+.imgSize{
+    width:100%;
+    height:100%;
+}
+.bruh{
+    background-image: url("/assets/AboutMain.jpg");
+    height: 500px;
+    width: 450px;
+}
+.EZlower{
+margin-bottom: 10px;
+}
+.EZhigher{
+margin-top: 30px;
+}
+.EZheroimage{
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+}
+.EZhigherrr{
+    margin-top: 50px;
+    }
+.EZpadL{
+    padding-left: 10px;
+}
+.EZpadR{
+    padding-right: 10px;
+}
